@@ -2,7 +2,7 @@ clear; clc ;
 
 % load
 
-filename = 'NE_MCT25oC_HPPC25oC_OCV_KENTECH.mat'; % pased data
+filename = 'struct_hyundai_hppc_parse.mat'; % pased data
 filename_out = 'struct_hyundai_hppc_pulse.mat';
 Crate_pulse = -1;
 %dt_pulse = 180; % there are short pulses as short as 30s
@@ -62,13 +62,14 @@ end
 
 
 % VISUALIZATION
-clear j
+
+
 figure(1); hold on
 for j = 1:length(pstruct)
     yyaxis left
-    plot(pstruct(j).t,pstruct(j).V,'-m','linewidth',2); hold on
+    plot(pstruct(j).t,pstruct(j).V,'o-m','linewidth',2); hold on
     yyaxis right
-    plot(pstruct(j).t,pstruct(j).Crate,'-c','linewidth',2)
+    plot(pstruct(j).t,pstruct(j).Crate,'o-c','linewidth',2)
 
 
 
@@ -80,6 +81,7 @@ for j = 1:length(pstruct)
     plot(pstruct(j).t-pstruct(j).t(1),pstruct(j).V,'-m','linewidth',2); hold on
     yyaxis right
     plot(pstruct(j).t-pstruct(j).t(1),pstruct(j).Crate,'-c','linewidth',2)
+    ylim([-3 0])
 
 
 
