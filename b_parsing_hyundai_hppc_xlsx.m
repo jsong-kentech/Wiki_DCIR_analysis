@@ -4,7 +4,7 @@ clear; clc; close all
 % config
 filename = 'NE_MCT25oC_HPPC25oC_OCV_KENTECH.xlsx';
 sheetname = 'HPPC_25oC';
-filename_out = 'NE_MCT25oC_HPPC25oC_OCV_KENTECH.mat';
+filename_out = 'struct_hyundai_hppc_parse.mat';
 I_1C = 55.6; %[A]
 
 
