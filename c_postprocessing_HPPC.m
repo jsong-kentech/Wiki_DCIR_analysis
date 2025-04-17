@@ -78,7 +78,7 @@ end
 figure(2)
 for j = 1:length(pstruct)
     yyaxis left
-    plot(pstruct(j).t-pstruct(j).t(1),pstruct(j).V,'-m','linewidth',2); hold on
+    plot([0; pstruct(j).t-pstruct(j).t(1)],[pstruct(j).OCV; pstruct(j).V],'-m','linewidth',2); hold on
     yyaxis right
     plot(pstruct(j).t-pstruct(j).t(1),pstruct(j).Crate,'-c','linewidth',2)
     ylim([-3 0])
